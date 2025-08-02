@@ -236,7 +236,7 @@ pre.code-preview code {
 </pre>
 
     <!-- <span class="code-static">.wrapper &#123;</span> -->
-    <input type="text" name="q10" class="code-input" placeholder="ex) .wrapper{color:red;}">
+    <input type="text" name="q10" class="code-input" placeholder="ex) .wrapper{color:red;git add .}">
     <!-- <span class="code-static">&#125;</span> -->
   </div>
  
@@ -262,8 +262,11 @@ pre.code-preview code {
       if (hasStructure && hasStyle) score++;
 
       // 10번: display: flex; 입력 여부 확인
+      // const q10 = form.q10.value.replace(/\s+/g, '').toLowerCase();
+      // if (q10 === "display:flex;" || q10 === "display:flex") score++;
+
       const q10 = form.q10.value.replace(/\s+/g, '').toLowerCase();
-      if (q10 === "display:flex;" || q10 === "display:flex") score++;
+if (q10.includes("display:flex")) score++;
 
       document.getElementById("result").innerHTML = `총점: ${score} / 10점`;
     });
