@@ -75,6 +75,21 @@
       border-radius: 5px;
       margin-top: 30px;
     }
+    pre.code-preview {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  margin-top: 15px;
+}
+
+pre.code-preview code {
+  white-space: pre-wrap;
+  display: block;
+}
 
     #result {
       margin-top: 30px;
@@ -209,15 +224,22 @@
       <input type="text" name="q9">
     </div>
 
-    <div class="question">
-      <div class="question-title">10. 아래 코드를 완성하여 .item들을 수평 배치되도록 CSS를 작성하세요.</div>
-      <div class="code-wrapper">
-        <span class="code-static">.wrapper &#123;</span>
-        <input type="text" name="q10" class="code-input" placeholder="display: flex;">
-        <span class="code-static">&#125;</span>
-      </div>
-    </div>
+   <div class="question">
+  <div class="question-title">10. 아래 코드를 완성하여 .item들을 수평 배치되도록 CSS를 작성하세요.</div>
+  <div class="code-wrapper">
+    <pre style="background: #1e1e1e; color: #d4d4d4; padding: 20px; border-radius: 8px;">
+&lt;div class="wrapper"&gt;
+  &lt;div class="item"&gt;아이템 1&lt;/div&gt;
+  &lt;div class="item"&gt;아이템 2&lt;/div&gt;
+  &lt;div class="item"&gt;아이템 3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
+    <!-- <span class="code-static">.wrapper &#123;</span> -->
+    <input type="text" name="q10" class="code-input" placeholder="ex) .wrapper{color:red;}">
+    <!-- <span class="code-static">&#125;</span> -->
+  </div>
+ 
     <button type="button" id="submitBtn">제출하기</button>
     <div id="result"></div>
   </form>
