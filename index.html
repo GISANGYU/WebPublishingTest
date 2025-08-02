@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>웹퍼블리싱 중간평가</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 30px;
+    }
+
+    .question {
+      margin-bottom: 30px;
+    }
+
+    .question-title {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .options label {
+      display: block;
+      margin-top: 5px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    textarea,
+    input[type="text"],
+    .code-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    .code-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: monospace;
+      flex-wrap: wrap;
+    }
+
+    .code-static {
+      white-space: nowrap;
+      font-size: 1rem;
+    }
+
+    .code-input {
+      flex-grow: 1;
+      min-width: 120px;
+    }
+
+    #submitBtn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background-color: #3498db;
+      color: white;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 30px;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .question-title {
+        font-size: 0.95rem;
+      }
+
+      .options label {
+        font-size: 0.9rem;
+      }
+
+      .code-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .code-static {
+        font-size: 0.95rem;
+      }
+
+      #submitBtn {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>웹퍼블리싱 중간평가</h1>
+<form id="quizForm">
+
+<!-- 여기 아래부터 기존 문제 코드 삽입됨 -->
+
+<!-- 객관식 문제 1~8 -->
+    <div class="question">
+      <div class="question-title">1. HTML에서 웹 페이지의 제목을 정의하는 태그는?</div>
+      <div class="options">
+        <label><input type="radio" name="q1" value="1"> ① &lt;title&gt;</label>
+        <label><input type="radio" name="q1" value="0"> ② &lt;h1&gt;</label>
+        <label><input type="radio" name="q1" value="0"> ③ &lt;head&gt;</label>
+        <label><input type="radio" name="q1" value="0"> ④ &lt;meta&gt;</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-title">2. &lt;img&gt; 태그에 반드시 들어가야 하는 속성은?</div>
+      <div class="options">
+        <label><input type="radio" name="q2" value="0"> ① href</label>
+        <label><input type="radio" name="q2" value="0"> ② alt</label>
+        <label><input type="radio" name="q2" value="1"> ③ src</label>
+        <label><input type="radio" name="q2" value="0"> ④ type</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-title">3. CSS에서 글자 색상을 지정하는 속성은?</div>
+      <div class="options">
+        <label><input type="radio" name="q3" value="0"> ① font-color</label>
+        <label><input type="radio" name="q3" value="0"> ② text-style</label>
+        <label><input type="radio" name="q3" value="1"> ③ color</label>
+        <label><input type="radio" name="q3" value="0"> ④ text-color</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-title">4. 다음 중 HTML에서 콘텐츠를 묶는 데 가장 많이 사용하는 태그는?</div>
+      <div class="options">
+        <label><input type="radio" name="q4" value="1"> ① &lt;div&gt;</label>
+        <label><input type="radio" name="q4" value="0"> ② &lt;img&gt;</label>
+        <label><input type="radio" name="q4" value="0"> ③ &lt;link&gt;</label>
+        <label><input type="radio" name="q4" value="0"> ④ &lt;meta&gt;</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-title">5. display: flex;의 기본 축은?</div>
+      <div class="options">
+        <label><input type="radio" name="q5" value="0"> ① 수직 방향</label>
+        <label><input type="radio" name="q5" value="1"> ② 수평 방향</label>
+        <label><input type="radio" name="q5" value="0"> ③ 컨테이너의 높이</label>
+        <label><input type="radio" name="q5" value="0"> ④ 글자 수</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-title">6. CSS에서 여러 클래스를 한 요소에 적용할 때 문법은?</div>
+      <div class="options">
+        <label><input type="radio" name="q6" value="0"> ① 쉼표(,)로 나열</label>
+        <label><input type="radio" name="q6" value="0"> ② + 기호 사용</label>
+        <label><input type="radio" name="q6" value="1"> ③ 공백으로 구분</label>
+        <label><input type="radio" name="q6" value="0"> ④ 클래스는 하나만 가능</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-title">7. 글자를 가운데 정렬하는 CSS 속성은?</div>
+      <div class="options">
+        <label><input type="radio" name="q7" value="1"> ① text-align: center;</label>
+        <label><input type="radio" name="q7" value="0"> ② justify-content: center;</label>
+        <label><input type="radio" name="q7" value="0"> ③ font-align: center;</label>
+        <label><input type="radio" name="q7" value="0"> ④ margin: auto;</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="question-title">8. 웹 접근성 측면에서 alt 속성이 중요한 이유는?</div>
+      <div class="options">
+        <label><input type="radio" name="q8" value="0"> ① 해상도 조절</label>
+        <label><input type="radio" name="q8" value="0"> ② 이미지 크기 조절</label>
+        <label><input type="radio" name="q8" value="1"> ③ 시각장애인을 위한 대체 텍스트</label>
+        <label><input type="radio" name="q8" value="0"> ④ 다운로드 속도 향상</label>
+      </div>
+    </div>
+
+    <!-- 주관식 -->
+    <div class="question">
+      <div class="question-title">9. HTML과 CSS의 역할을 각각 한 문장으로 설명해보세요.</div>
+      <input type="text" name="q9">
+    </div>
+
+    <div class="question">
+      <div class="question-title">10. 아래 코드를 완성하여 .item들을 수평 배치되도록 CSS를 작성하세요.</div>
+      <div class="code-wrapper">
+        <span class="code-static">.wrapper &#123;</span>
+        <input type="text" name="q10" class="code-input" placeholder="display: flex;">
+        <span class="code-static">&#125;</span>
+      </div>
+    </div>
+
+    <button type="button" id="submitBtn">제출하기</button>
+    <div id="result"></div>
+  </form>
+
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", function () {
+      const form = document.forms.quizForm;
+      let score = 0;
+
+      // 객관식 1~8
+      for (let i = 1; i <= 8; i++) {
+        const selected = [...form["q" + i]].find(r => r.checked);
+        if (selected) score += parseInt(selected.value);
+      }
+
+      // 주관식 9번 정답 기준: "구조 또는 뼈대" + "스타일" 포함
+      const q9 = form.q9.value.toLowerCase();
+      const hasStructure = q9.includes("구조") || q9.includes("뼈대");
+      const hasStyle = q9.includes("스타일");
+      if (hasStructure && hasStyle) score++;
+
+      // 10번: display: flex; 입력 여부 확인
+      const q10 = form.q10.value.replace(/\s+/g, '').toLowerCase();
+      if (q10 === "display:flex;" || q10 === "display:flex") score++;
+
+      document.getElementById("result").innerHTML = `총점: ${score} / 10점`;
+    });
+  </script>
+</body>
+</html>
